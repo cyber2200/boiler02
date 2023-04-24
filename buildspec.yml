@@ -16,3 +16,4 @@ phases:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
       - docker push 661934562735.dkr.ecr.us-east-1.amazonaws.com/test01
+      - aws ecs update-service --cluster test01 --service test01 --force-new-deployment
